@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Planit | Making Planners More Efficient</title>
+    <!-- <script src = "custom-planner.js"></script> -->
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <!-- Navbar(still responsive but without the toggle icon) -->
+    <nav class="fixed-top navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a id="#mainNavbar" class="navbar-brand" href="#">
+                <img src="planitlogo.png" alt="" class="logo">
+                Planit
+            </a>
+        </div>
+    </nav>
+
+    <!-- page content -->
+    <div class="panel">
+
+        <div class="customization-plan">
+            <!-- dropdown choices/options -->
+            <h3> The value of the option selected is:
+                <span class="output"></span>
+            </h3>
+            <label for="type-select">Daily/Monthly</label>
+            <p>
+                <select name="type" id="types" >
+                    <option value="daily">Daily Planner</option>
+                    <option value="monthly">Monthly Planner</option>
+                </select>
+             
+             
+                <button onclick="getPageNumber()">Check option</button>
+                <script type="text/javascript">
+             
+                function getPageNumber() {
+                    selectElement = document.querySelector('#pages');
+                    output = selectElement.options[selectElement.selectedIndex].value;
+                    document.querySelector('.output').textContent = output;
+                }
+                </script>
+            </p>
+        </div>
+
+        <div class="customization-plan">
+            <!-- dropdown choices/options -->
+            <label for="month-select">Month</label>
+            <p>
+                <select name="months" id="months">
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+
+            <!-- function to store selected value -->
+                <button onclick="getDesign()">Check option</button>
+                <script type="text/javascript">
+             
+                function getDesign() {
+                    selectElement = document.querySelector('#designs');
+                    output = selectElement.options[selectElement.selectedIndex].value;
+                    document.querySelector('.output').textContent = output;
+                }
+                </script>
+            </p>
+        </div>
+        <div class="customization-plan">
+            <!-- dropdown choices/options --> 
+            <label for="layout-select">Layout</label>
+            <p>
+                <select name="layouts" id="layouts" >
+                    <option value="vertical">Monthly - Vertical</option>
+                    <option value="horizontal">Monthly - Horizontal</option>
+                    <option value="standard">Daily - Standard</option>
+                    <option value="reflection">Daily - Daily Reflections</option>
+                </select>
+
+                <!-- function to store selected value -->
+                <button onclick="getListNumber()">Check option</button>
+                <script type="text/javascript">
+             
+                function getListNumber() {
+                    selectElement = document.querySelector('#lists');
+                    output = selectElement.options[selectElement.selectedIndex].value;
+                    document.querySelector('.output').textContent = output;
+                }
+                </script>
+            </p>
+        </div>
+        <div class="customization-plan">
+            <!-- dropdown choices/options -->
+            <label for="line-select">Number of note sections in a page</label>
+            <p>
+                <select name="lines" id="lines">
+                    <option value="none">No Lines</option>
+                    <option value="lines">Standard Lines</option>
+                    <option value="dotted">Dotted Lines</option>
+                </select>
+             
+             <!-- function to store selected value -->
+                <button onclick="getNotes()">Check option</button>
+                <script type="text/javascript">
+             
+                function getNotes() {
+                    selectElement = document.querySelector('#notes');
+                    output = selectElement.options[selectElement.selectedIndex].value;
+                    document.querySelector('.output').textContent = output;
+                }
+                </script>
+            </p>
+        </div>
+        <div class="customization-plan">
+            <!-- dropdown choices/options -->
+            <label for="design-select">Design</label>
+            <p>
+                <select name="designs" id="designs">
+                    <option value="standard">Standard</option>
+                    <option value="planit">Planit</option>
+                    <option value="apricot">Apricot</option>
+                    <option value="cobalt">Cobalt</option>
+                </select>
+            </p>
+        </div>
+
+        <a href="preview_planner.html" class="next">Next</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixed-bottom">
+        <div class="justify-content-center nav">
+            <ul class="nav justify-content-center container">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="our_story.html">OUR STORY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Popper and Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+
+</body>
+
+</html>
+
